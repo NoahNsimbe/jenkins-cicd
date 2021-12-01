@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: podinfo-deployment
+  namespace: jenkins
   labels:
     app: podinfo
 spec:
@@ -16,7 +17,7 @@ spec:
     spec:
       containers:
       - name: podinfo
-        image: noahnimbe/podinfo:{{BUILD_NUMBER}}
+        image: noahnsimbe/podinfo:{{BUILD_NUMBER}}
         imagePullPolicy: Always
         ports:
         - containerPort: 4444
