@@ -21,6 +21,7 @@ spec:
         imagePullPolicy: Always
         resources: {}
         readinessProbe: {}
+        livenessProbe: {}
         ports:
         - containerPort: 4444
         env:
