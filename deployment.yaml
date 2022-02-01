@@ -19,6 +19,9 @@ spec:
       - name: podinfo
         image: noahnsimbe/podinfo:{{BUILD_NUMBER}}
         imagePullPolicy: Always
+        resources: {}
+        readinessProbe: {}
+        livenessProbe: {}
         ports:
         - containerPort: 4444
         env:
